@@ -1,0 +1,52 @@
+-----------Calculator Logic
+-----------Zachary Springman
+-----------March 6, 2022
+
+
+Each button should give a value to build a string...
+
+i.e.: 
+	"1" + "-" + "1"
+	The user hits the one button, then the minus button, then the one button again
+	Next, the user should hit the equals button to actually calculate the result.
+	Result: "0"
+
+So what function should run when each button is pushed?
+At the start of the program we should initialize a string...
+Each button should have a press function...
+
+i.e.:
+	function onePress() {
+		final += "1";
+	}
+	
+	Now this should work if the user clicks multiple numbers, and we can divide the string by the operators and run the actual algorithm...
+	The result should ALWAYS look somewhat like the example I gave at the top...
+	"1" + "-" + "1"
+	In this case - final would equal "1+1"... so how would we actual do the math?
+	
+	We need a function to take the string as an input, and do the calculation...
+	
+	My thoughts - we check what operator the string contains... then split the string by that operator and calculate the two sides together
+	
+	function calculateResult(string result) {
+		if(result.includes("+") == true) {
+			var answer = 0;
+		   result.split("+"); //This will return an array with the two values we need: reult[0] and result[1]
+		   answer = parseInt(result[0]) + parseInt(result[1]);
+		   return answer; //or set answer to a certain div id and display on calculator screen 
+		}
+	}
+	
+	################AFTER FINSISHED REFLECTION#######################
+	
+	My logic worked exactly how I had hoped!
+	This project was a huge success - I hard coded the javaScript and found a tutorial online for the HTML and CSS (to save time since my goal was only to make the algorithm)
+	
+	My main goal for this project was to push my knowledge of JS and see exactly how far it would stretch...
+	I am impressed with myself... this is the first project of many! :)
+	
+	While doing research I found a built in JS function called "eval()" that would have taken my original string and done the math... so while my project works, there are always better solutions - at least 
+	I learned this for next time.
+	
+	###################################### FINISHED march 7, 2022
